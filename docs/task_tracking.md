@@ -1,0 +1,61 @@
+# Task: UHFC Sports Complex Web App Implementation
+
+- [x] Project Planning
+    - [x] Analyze image context and branding
+    - [x] Define feature set
+    - [x] Create detailed implementation plan
+- [x] Design System
+    - [x] Create UI-UX draft in draft-UI.pen
+    - [x] Define premium color palette (Electric Pitch Green with noise/grain)
+    - [x] Select typography (Michroma & Syne for athletic character)
+    - [x] Asset Strategy (Mix of `.assets/` + AI Generative)
+    - [x] Plan Motion Orchestration (Lenis + Framer Staggered Reveals)
+    - [ ] Create UI component library
+- [/] Development
+    - [x] Set up project structure (Next.js/React)
+    - [x] Configure Smooth Scrolling (Lenis)
+    - [x] Integrate Premium Typography (Google Fonts)
+    - [x] Implement Landing Page with Framer Motion Reveals
+        - [x] Build Navigation Bar
+        - [x] Build Hero Section
+    - [x] Implement Turf Rental Workflow (Time slots + Date picker)
+    - [x] Implement Tournament Booking (Events + Payment Simulation)
+    - [x] Implement Community Gallery & News Feed (Community Wall)
+    - [x] Build Footer Section
+- [x] Verification
+    - [x] Verify Scroll performance & Framer animations
+    - [x] Perform UI/UX audit
+    - [x] Verify responsiveness
+    - [x] Resolve Dependency & Linting Issues (@lenis/react migration)
+    - [x] Final Production Build Check
+    - [x] Create walkthrough
+    - [x] Make all interactive elements functional
+        - [x] Navbar smooth scroll navigation
+        - [x] Hero CTAs scroll to sections
+        - [x] FacilityCard booking buttons
+        - [x] Events registration modal
+        - [x] Booking venue selection & form flow
+        - [x] Footer navigation links
+- [x] Asset Repair
+    - [x] Identify replacement images from artifacts
+    - [x] Copy identified assets to public directory
+    - [x] Update component paths (About, Coaches, News)
+    - [x] Use existing portraits/images as placeholders (Quota limited)
+    - [x] Verify visual consistency
+- [ ] Scroll Spy
+    - [x] Implement active section state in Navbar
+    - [x] Add IntersectionObserver to track sections
+    - [x] Apply active styles to nav links
+    - [x] Verify scroll interaction
+- [x] Documentation
+    - [x] Create docs directory
+    - [x] Generate Project Overview
+    - [x] Document Design System
+    - [x] List Component Architecture
+    - [x] Create Setup Guide
+    - [x] Snapshot Current Status
+    - [x] Copy Task & Implementation Plans
+- [x] Stats Animation
+    - [x] Refactor StatCounter for performance (useInView, direct DOM manipulation)
+    - [x] Verify animation details (duration, easing)
+    - [x] Check suffix handling
