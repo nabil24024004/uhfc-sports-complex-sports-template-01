@@ -19,15 +19,15 @@ export default function Footer() {
 
   return (
     <footer style={{
-      padding: '6rem 5% 3rem',
+      padding: 'clamp(3rem, 6vh, 6rem) 5% clamp(2rem, 4vh, 3rem)',
       background: '#04080e',
       borderTop: '1px solid rgba(168, 255, 0, 0.1)'
     }}>
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: '4rem',
-        marginBottom: '4rem'
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(180px, 100%), 1fr))',
+        gap: 'clamp(2rem, 4vw, 4rem)',
+        marginBottom: 'clamp(2rem, 4vh, 4rem)'
       }}>
         <div>
           <h4 style={{ fontFamily: 'var(--font-michroma)', color: 'var(--accent)', marginBottom: '1.5rem', fontSize: '1rem' }}>UHFC TURF</h4>

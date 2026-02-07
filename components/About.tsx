@@ -13,7 +13,7 @@ export default function About() {
 
   return (
     <section id="about" style={{
-      padding: '8rem 5%',
+      padding: 'clamp(4rem, 10vh, 8rem) 5%',
       background: '#0a0f18'
     }}>
       <div style={{
@@ -26,11 +26,11 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          style={{ textAlign: 'center', marginBottom: '4rem' }}
+          style={{ textAlign: 'center', marginBottom: 'clamp(2.5rem, 5vh, 4rem)' }}
         >
           <span style={{
             fontFamily: 'var(--font-michroma)',
-            fontSize: '0.75rem',
+            fontSize: 'clamp(0.65rem, 1.5vw, 0.75rem)',
             color: 'var(--accent)',
             letterSpacing: '0.3em',
             marginBottom: '1rem',
@@ -40,7 +40,7 @@ export default function About() {
           </span>
           <h2 style={{
             fontFamily: 'var(--font-syne)',
-            fontSize: 'clamp(2rem, 4vw, 3rem)',
+            fontSize: 'clamp(1.75rem, 4vw, 3rem)',
             fontWeight: 700,
             color: 'var(--text)',
             marginBottom: '1.5rem'
@@ -49,11 +49,12 @@ export default function About() {
           </h2>
           <p style={{
             fontFamily: 'var(--font-syne)',
-            fontSize: '1.1rem',
+            fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
             color: 'var(--text-muted)',
             maxWidth: '700px',
             margin: '0 auto',
-            lineHeight: 1.8
+            lineHeight: 1.8,
+            padding: '0 1rem'
           }}>
             UHFC Turf Ground is Dhaka&apos;s premier multi-sport facility, offering 
             world-class football, cricket, and badminton experiences. Since 2012, 
@@ -64,9 +65,9 @@ export default function About() {
         {/* Content Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
           gap: '2rem',
-          marginBottom: '4rem'
+          marginBottom: 'clamp(2.5rem, 5vh, 4rem)'
         }}>
           {/* Left Image */}
           <motion.div
@@ -76,7 +77,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             style={{
               position: 'relative',
-              height: '350px',
+              height: 'clamp(250px, 40vw, 350px)',
               borderRadius: '8px',
               overflow: 'hidden',
               border: '1px solid rgba(168, 255, 0, 0.1)'
@@ -98,7 +99,7 @@ export default function About() {
             }}>
               <span style={{
                 fontFamily: 'var(--font-michroma)',
-                fontSize: '0.7rem',
+                fontSize: 'clamp(0.6rem, 1.2vw, 0.7rem)',
                 color: 'var(--accent)'
               }}>
                 ESTABLISHED 2012
@@ -114,7 +115,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
             style={{
               position: 'relative',
-              height: '350px',
+              height: 'clamp(250px, 40vw, 350px)',
               borderRadius: '8px',
               overflow: 'hidden',
               border: '1px solid rgba(168, 255, 0, 0.1)'
@@ -136,7 +137,7 @@ export default function About() {
             }}>
               <span style={{
                 fontFamily: 'var(--font-michroma)',
-                fontSize: '0.7rem',
+                fontSize: 'clamp(0.6rem, 1.2vw, 0.7rem)',
                 color: 'var(--accent)'
               }}>
                 24/7 AVAILABILITY
@@ -148,7 +149,7 @@ export default function About() {
         {/* Features Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))',
           gap: '1.5rem'
         }}>
           {features.map((feature, i) => (
@@ -160,7 +161,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -5, borderColor: 'rgba(168, 255, 0, 0.3)' }}
               style={{
-                padding: '1.5rem',
+                padding: 'clamp(1.2rem, 2vw, 1.5rem)',
                 background: 'var(--surface)',
                 borderRadius: '8px',
                 border: '1px solid rgba(255,255,255,0.05)',
@@ -171,11 +172,11 @@ export default function About() {
                 transition: 'border-color 0.3s ease'
               }}
             >
-              <span style={{ fontSize: '2rem' }}>{feature.icon}</span>
+              <span style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>{feature.icon}</span>
               <div>
                 <h4 style={{
                   fontFamily: 'var(--font-michroma)',
-                  fontSize: '0.85rem',
+                  fontSize: 'clamp(0.75rem, 1.5vw, 0.85rem)',
                   color: 'var(--text)',
                   marginBottom: '0.5rem'
                 }}>
@@ -183,7 +184,7 @@ export default function About() {
                 </h4>
                 <p style={{
                   fontFamily: 'var(--font-syne)',
-                  fontSize: '0.85rem',
+                  fontSize: 'clamp(0.8rem, 1.5vw, 0.85rem)',
                   color: 'var(--text-muted)',
                   lineHeight: 1.5
                 }}>
@@ -197,3 +198,4 @@ export default function About() {
     </section>
   );
 }
+

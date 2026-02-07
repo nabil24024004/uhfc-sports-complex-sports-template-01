@@ -36,8 +36,8 @@ export default function Facilities() {
       >
         <h2 style={{
           fontFamily: 'var(--font-michroma)',
-          fontSize: '2.5rem',
-          marginBottom: '1rem',
+          fontSize: 'clamp(1.75rem, 5vw, 2.5rem)',
+          marginBottom: 'clamp(0.75rem, 2vh, 1rem)',
           color: 'var(--text)'
         }}>
           THE PITCH FLOOR
@@ -47,8 +47,8 @@ export default function Facilities() {
 
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        gap: '2.5rem'
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
+        gap: 'clamp(2rem, 4vw, 2.5rem)'
       }}>
         {facilities.map((facility, index) => (
           <motion.div

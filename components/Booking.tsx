@@ -61,7 +61,7 @@ export default function Booking() {
     <div style={{ marginBottom: '1.5rem' }}>
       <h4 style={{ 
         fontFamily: 'var(--font-michroma)', 
-        fontSize: '0.7rem', 
+        fontSize: 'clamp(0.75rem, 2vw, 0.85rem)', 
         marginBottom: '0.8rem', 
         opacity: 0.6,
         borderBottom: '1px solid rgba(255,255,255,0.1)',
@@ -71,8 +71,8 @@ export default function Booking() {
       </h4>
       <div style={{ 
         display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', 
-        gap: '0.8rem'
+        gridTemplateColumns: 'repeat(auto-fill, minmax(min(90px, 100%), 1fr))', 
+        gap: 'clamp(0.6rem, 1.5vw, 0.8rem)'
       }}>
         {timeSlots.filter(s => s.type === type).map((slot) => (
           <motion.button
@@ -81,12 +81,12 @@ export default function Booking() {
             whileTap={{ scale: 0.95 }}
             onClick={() => setSelectedSlot(slot)}
             style={{
-              padding: '0.6rem 0.2rem',
+              padding: 'clamp(0.7rem, 2vw, 0.8rem) 0.3rem',
               background: selectedSlot?.label === slot.label ? 'var(--accent)' : 'rgba(255,255,255,0.03)',
               border: `1px solid ${selectedSlot?.label === slot.label ? 'var(--accent)' : 'rgba(255,255,255,0.1)'}`,
               color: selectedSlot?.label === slot.label ? '#000' : 'var(--text)',
               fontFamily: 'var(--font-outfit)',
-              fontSize: '0.7rem',
+              fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
               cursor: 'pointer',
               borderRadius: '2px',
               transition: 'all 0.2s ease',
@@ -97,7 +97,7 @@ export default function Booking() {
             }}
           >
             <span>{slot.label.split(' ')[0]}</span>
-            <span style={{ fontSize: '0.6rem', opacity: selectedSlot?.label === slot.label ? 0.8 : 0.5 }}>
+            <span style={{ fontSize: 'clamp(0.7rem, 1.8vw, 0.75rem)', opacity: selectedSlot?.label === slot.label ? 0.8 : 0.5 }}>
               {slot.label.split(' ')[1]}
             </span>
           </motion.button>
@@ -107,9 +107,9 @@ export default function Booking() {
   );
 
   return (
-    <section id="booking" style={{ padding: '8rem 5%', background: 'var(--background)' }}>
+    <section id="booking" style={{ padding: 'clamp(4rem, 10vh, 8rem) 5%', background: 'var(--background)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', alignItems: 'start' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))', gap: 'clamp(2rem, 5vw, 4rem)', alignItems: 'start' }}>
           
           {/* Left: Info */}
           <motion.div
@@ -119,8 +119,8 @@ export default function Booking() {
           >
             <h2 style={{ 
               fontFamily: 'var(--font-michroma)', 
-              fontSize: '2.5rem', 
-              marginBottom: '1.5rem',
+              fontSize: 'clamp(1.75rem, 5vw, 2.5rem)', 
+              marginBottom: 'clamp(1rem, 2vh, 1.5rem)',
               color: 'var(--accent)'
             }}>
               SECURE YOUR <br /> SESSION
@@ -218,9 +218,9 @@ export default function Booking() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                 >
-                  <h3 style={{ fontFamily: 'var(--font-michroma)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>SELECT TIME SLOT</h3>
+                  <h3 style={{ fontFamily: 'var(--font-michroma)', fontSize: 'clamp(0.9rem, 2.5vw, 1rem)', marginBottom: '1.5rem' }}>SELECT TIME SLOT</h3>
                   
-                  <div style={{ marginBottom: '2rem', maxHeight: '400px', overflowY: 'auto', paddingRight: '0.5rem' }}>
+                  <div style={{ marginBottom: '2rem', maxHeight: '600px', overflowY: 'auto', paddingRight: '0.5rem' }}>
                     {renderSlotGroup("MORNING", "morning")}
                     {renderSlotGroup("DAY", "day")}
                     {renderSlotGroup("NIGHT", "night")}
@@ -238,7 +238,7 @@ export default function Booking() {
                       border: 'none',
                       color: selectedSlot ? '#000' : 'rgba(255,255,255,0.2)',
                       fontFamily: 'var(--font-michroma)',
-                      fontSize: '0.8rem',
+                      fontSize: 'clamp(0.85rem, 2.2vw, 0.95rem)',
                       fontWeight: 'bold',
                       cursor: selectedSlot ? 'pointer' : 'not-allowed',
                       borderRadius: '2px'
@@ -254,7 +254,7 @@ export default function Booking() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                 >
-                  <h3 style={{ fontFamily: 'var(--font-michroma)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>CONFIRM BOOKING</h3>
+                  <h3 style={{ fontFamily: 'var(--font-michroma)', fontSize: 'clamp(0.9rem, 2.5vw, 1rem)', marginBottom: '1.5rem' }}>CONFIRM BOOKING</h3>
                   
                   <div style={{ 
                     marginBottom: '1.5rem', 
@@ -263,12 +263,12 @@ export default function Booking() {
                     borderLeft: '3px solid var(--accent)',
                     borderRadius: '0 2px 2px 0'
                   }}>
-                    <p style={{ fontFamily: 'var(--font-outfit)', fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.3rem' }}>Selected Session</p>
+                    <p style={{ fontFamily: 'var(--font-outfit)', fontSize: 'clamp(0.8rem, 2vw, 0.85rem)', opacity: 0.6, marginBottom: '0.3rem' }}>Selected Session</p>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <p style={{ fontFamily: 'var(--font-syne)', fontSize: '1.1rem' }}>{selectedSlot?.label}</p>
-                      <p style={{ fontFamily: 'var(--font-michroma)', fontSize: '1.1rem', color: 'var(--accent)' }}>BDT {selectedSlot?.price}</p>
+                      <p style={{ fontFamily: 'var(--font-syne)', fontSize: 'clamp(1.1rem, 3vw, 1.2rem)' }}>{selectedSlot?.label}</p>
+                      <p style={{ fontFamily: 'var(--font-michroma)', fontSize: 'clamp(1.1rem, 3vw, 1.2rem)', color: 'var(--accent)' }}>BDT {selectedSlot?.price}</p>
                     </div>
-                    <p style={{ fontFamily: 'var(--font-outfit)', fontSize: '0.8rem', opacity: 0.7, marginTop: '0.3rem' }}>{selectedVenue}</p>
+                    <p style={{ fontFamily: 'var(--font-outfit)', fontSize: 'clamp(0.85rem, 2vw, 0.9rem)', opacity: 0.7, marginTop: '0.3rem' }}>{selectedVenue}</p>
                   </div>
 
                   <form onSubmit={handlePayment} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -349,7 +349,7 @@ export default function Booking() {
                           border: 'none',
                           color: '#000',
                           fontFamily: 'var(--font-michroma)',
-                          fontSize: '0.8rem',
+                          fontSize: 'clamp(0.85rem, 2.2vw, 0.95rem)',
                           fontWeight: 'bold',
                           cursor: isSubmitted ? 'wait' : 'pointer',
                           borderRadius: '2px'

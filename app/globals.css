@@ -45,3 +45,56 @@ body {
   background-image: radial-gradient(circle at 50% -20%, rgba(168, 255, 0, 0.15) 0%, transparent 60%);
   background-attachment: fixed;
 }
+
+/* Mobile Breakpoint Media Queries */
+
+/* Base mobile adjustments */
+@media (max-width: 640px) {
+  :root {
+    --mobile-padding: 1.5rem;
+    --mobile-section-padding: 3rem 5%;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  /* Reduce background glow intensity on mobile */
+  body::before {
+    opacity: 0.02;
+  }
+}
+
+/* Large phones / Small tablets */
+@media (min-width: 641px) and (max-width: 768px) {
+  :root {
+    --mobile-padding: 2rem;
+    --mobile-section-padding: 4rem 5%;
+  }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --tablet-padding: 2.5rem;
+  }
+}
+
+/* Utility classes for responsive visibility */
+.mobile-only {
+  display: none !important;
+}
+
+.desktop-only {
+  display: flex !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: flex !important;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+}

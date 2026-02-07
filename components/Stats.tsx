@@ -75,7 +75,7 @@ export default function Stats() {
 
   return (
     <section style={{
-      padding: '4rem 5%',
+      padding: 'clamp(3rem, 6vh, 4rem) 5%',
       background: 'linear-gradient(180deg, #0a0f18 0%, #080c14 100%)',
       borderTop: '1px solid rgba(168, 255, 0, 0.1)',
       borderBottom: '1px solid rgba(168, 255, 0, 0.1)'
@@ -84,8 +84,8 @@ export default function Stats() {
         maxWidth: '1200px',
         margin: '0 auto',
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: '1rem'
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(180px, 100%), 1fr))',
+        gap: 'clamp(2rem, 4vw, 1rem)'
       }}>
         {stats.map((stat) => (
           <StatCounter key={stat.label} {...stat} />

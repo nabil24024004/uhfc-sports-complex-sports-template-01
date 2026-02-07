@@ -64,8 +64,8 @@ export default function Events() {
         <div style={{ position: 'relative', zIndex: 1 }}>
           <h2 style={{
             fontFamily: 'var(--font-michroma)',
-            fontSize: '2rem',
-            marginBottom: '3rem',
+            fontSize: 'clamp(1.75rem, 5vw, 2rem)',
+            marginBottom: 'clamp(2rem, 4vh, 3rem)',
             textAlign: 'center'
           }}>
             UPCOMING EVENTS
@@ -73,15 +73,15 @@ export default function Events() {
 
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: '2rem' 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', 
+            gap: 'clamp(1.5rem, 3vw, 2rem)' 
           }}>
             {events.map((event) => (
               <motion.div 
                 key={event.id} 
                 whileHover={{ y: -5 }}
                 style={{
-                  padding: '2rem',
+                  padding: 'clamp(1.5rem, 3vw, 2rem)',
                   background: 'rgba(255, 255, 255, 0.02)',
                   border: '1px solid rgba(255, 255, 255, 0.05)',
                   display: 'flex',
@@ -94,13 +94,13 @@ export default function Events() {
                   <span style={{ 
                     fontFamily: 'var(--font-michroma)', 
                     color: 'var(--accent)', 
-                    fontSize: '1.2rem' 
+                    fontSize: 'clamp(1.1rem, 3vw, 1.3rem)' 
                   }}>
                     {event.date}
                   </span>
                   <span style={{ 
                     fontFamily: 'var(--font-outfit)', 
-                    fontSize: '0.7rem', 
+                    fontSize: 'clamp(0.75rem, 2vw, 0.8rem)', 
                     opacity: 0.6,
                     letterSpacing: '2px'
                   }}>
@@ -108,13 +108,13 @@ export default function Events() {
                   </span>
                 </div>
                 
-                <h3 style={{ fontFamily: 'var(--font-syne)', fontSize: '1.5rem' }}>{event.title}</h3>
-                <p style={{ fontFamily: 'var(--font-outfit)', fontSize: '0.85rem', opacity: 0.7 }}>{event.description}</p>
+                <h3 style={{ fontFamily: 'var(--font-syne)', fontSize: 'clamp(1.4rem, 4vw, 1.6rem)' }}>{event.title}</h3>
+                <p style={{ fontFamily: 'var(--font-outfit)', fontSize: 'clamp(0.9rem, 2.2vw, 0.95rem)', opacity: 0.7 }}>{event.description}</p>
                 
                 <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div>
-                    <p style={{ fontFamily: 'var(--font-outfit)', fontSize: '1rem', fontWeight: 600 }}>{event.price}</p>
-                    <p style={{ fontFamily: 'var(--font-outfit)', fontSize: '0.75rem', color: '#ff4d4d' }}>{event.slots}</p>
+                    <p style={{ fontFamily: 'var(--font-outfit)', fontSize: 'clamp(1rem, 2.5vw, 1.1rem)', fontWeight: 600 }}>{event.price}</p>
+                    <p style={{ fontFamily: 'var(--font-outfit)', fontSize: 'clamp(0.75rem, 2vw, 0.8rem)', color: '#ff4d4d' }}>{event.slots}</p>
                   </div>
                   <motion.button 
                     whileHover={{ scale: 1.05 }}
@@ -126,7 +126,7 @@ export default function Events() {
                       color: '#000',
                       border: 'none',
                       fontFamily: 'var(--font-michroma)',
-                      fontSize: '0.7rem',
+                      fontSize: 'clamp(0.75rem, 2vw, 0.8rem)',
                       cursor: 'pointer',
                       fontWeight: 'bold'
                     }}
@@ -181,7 +181,7 @@ export default function Events() {
               onClick={(e) => e.stopPropagation()}
               style={{
                 background: 'var(--surface)',
-                padding: '3rem',
+                padding: 'clamp(1.5rem, 4vw, 3rem)',
                 borderRadius: '4px',
                 border: '1px solid rgba(168, 255, 0, 0.2)',
                 maxWidth: '450px',
